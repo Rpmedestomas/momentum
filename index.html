@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+        <link rel="stylesheet" href="css/style.css">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title> Momentum </title>
+    </head>
+
+    <body>
+
+        <div id="open">
+            <div id="open-modal">
+                <!-- Modal content -->
+                <div class="open-modal-content">
+                    <div id="open-modal-content">
+                        <h1 style="margin:5px">What's your name?</h1>
+                        <input type="text" id="open-modal-input" placeholder="Name">
+                        <span onclick="welcomegreeting()">submit</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="entire">
+
+            <!--START HEADER-->
+            <div class="main-container" id="header">
+
+                <div id="upper-left">
+                    <div id="links">
+                        <img src="media/images/links.svg">
+                    </div>
+                </div>
+
+                <div id="upper-right">
+                    <div id="weather">
+                        <img src="media/images/weather.svg">
+                    </div>
+                </div>
+
+            </div>
+            <!--END HEADER-->
+
+            <!--START MAIN-->
+            <div class="main-container" id="main">
+
+                <div id="time-container">
+
+                    <span id="time">
+                        
+                    </span>
+
+                </div>
+
+                <div id="welcome-container">
+                    <span id="welcome-greeting"></span>
+                </div>
+
+                <div id="focus-container">
+                    <div id="focus-question-container">
+                        <h3 style="margin:5px">What's your focus for today?</h3>
+                        <input type="text" id="focus-question-input" placeholder="">
+                        <span onclick="focusoutput()">submit</span>
+                    </div>
+
+                    <div id="focus-output-container">
+                        <h2>Today's Focus</h2>
+                        <span id="focus-output"></span>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--END MAIN-->
+
+            <!--START FOOTER-->
+            <div class="main-container" id="footer">
+                
+                <div id="lower-left">
+                    <div id="location">
+                        <img src="media/images/location.svg">
+                    </div>
+                </div>
+
+                <div id="lower-center">
+                    <span id="quote">
+                        
+                    </span>
+                </div>
+
+                <div id="lower-right">
+                    <button id="open-todo-modal"><img src="media/images/notes.svg"></button>
+
+                    <!-- The Modal -->
+                    <div id="todo-modal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="todo-modal-content">
+                            <span class="close">&times;</span>
+                            <div>
+                                <div id="myDIV" class="header">
+                                    <h2 style="margin:5px">My To Do List</h2>
+                                    <input type="text" id="myInput" placeholder="To do">
+                                    <span onclick="newElement()" class="addBtn">New To Do</span>
+                                </div>
+                                  
+                                <ul id="myUL">
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--END FOOTER-->
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>

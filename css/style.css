@@ -1,0 +1,480 @@
+#open-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+#open-modal .open-modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  background-image: url("https://wallpaperaccess.com/full/201234.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#open-modal .open-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#open-modal .open-modal-close:hover,
+#open-modal .open-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#header {
+  width: 100%;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#upper-left {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#upper-left #links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 10px;
+}
+
+#upper-left #links img {
+  width: 11%;
+}
+
+#upper-right {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#upper-right #weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 10px;
+  padding: 0;
+}
+
+#upper-right #weather img {
+  width: 10%;
+}
+
+#main {
+  width: 100%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+#time-container {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 200px 10px 10px 10px;
+}
+
+#time-container #time {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 50px;
+}
+
+#welcome-container {
+  width: auto;
+  height: auto;
+  margin: 10px;
+}
+
+#welcome-container #welcome-greeting {
+  font-size: 50px;
+}
+
+#focus-container {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+#focus-container #focus-question-container {
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 10px;
+}
+
+#focus-container #focus-output-container {
+  z-index: -1;
+  opacity: 0;
+  margin: 10px;
+}
+
+#footer {
+  width: 100%;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#lower-left {
+  width: 15%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#lower-left #location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+#lower-left #location img {
+  width: 15%;
+}
+
+#lower-center {
+  width: 70%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#lower-center #quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 15px;
+}
+
+#lower-center #quote h6 {
+  padding: 0;
+  margin: 0;
+}
+
+#lower-right {
+  width: 15%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /* Style the list items */
+  /* Set all odd list items to a different color (zebra-stripes) */
+  /* Darker background-color on hover */
+  /* When clicked on, add a background color and strike out text */
+  /* Add a "checked" mark when clicked on */
+  /* Style the close button */
+  /* Style the header */
+  /* Clear floats after the header */
+  /* Style the input */
+  /* Style the "Add" button */
+}
+
+#lower-right #open-todo-modal img {
+  width: 20px;
+}
+
+#lower-right .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+#lower-right .todo-modal-content {
+  background-color: #919191;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  color: black;
+}
+
+#lower-right .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#lower-right .close:hover,
+#lower-right .close:focus {
+  color: #302f2f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#lower-right ul {
+  margin: 0;
+  padding: 0;
+}
+
+#lower-right ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: black;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#lower-right ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+#lower-right ul li:hover {
+  background: #ddd;
+}
+
+#lower-right ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+#lower-right ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+#lower-right .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+#lower-right .close:hover {
+  background-color: #2e2d2d;
+  color: white;
+}
+
+#lower-right .header {
+  background-color: #919191;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+#lower-right .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#lower-right input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+#lower-right .addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #413f3f;
+  text-shadow: 0;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+#lower-right .addBtn:hover {
+  background-color: #bbb;
+}
+
+@font-face {
+  font-family: Karla;
+  src: url(Karla-VariableFont_wght.tff);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  color: white;
+  font-family: Karla;
+  text-shadow: 0 1px 5px black;
+  background-image: url("https://wallpaperaccess.com/full/201234.jpg");
+  background-repeat: no-repeat;
+}
+
+#entire {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=style.css.map */
